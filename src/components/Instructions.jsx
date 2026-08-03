@@ -10,9 +10,13 @@ function Instructions() {
         <article className="instructions__card">
           <h3>Recomendaciones para resultados óptimos</h3>
           <ul className="instructions__list">
-            <li>Rota las páginas a la orientación correcta antes de subirlas.</li>
+            <li>
+              Rota las páginas a la orientación correcta antes de subirlas.
+            </li>
             <li>Evita las páginas borrosas o con poca claridad.</li>
-            <li>Si usas una sola página, coloca el texto después de la página.</li>
+            <li>
+              Si usas una sola página, coloca el texto después de la página.
+            </li>
           </ul>
         </article>
 
@@ -21,8 +25,8 @@ function Instructions() {
           <ul className="instructions__list">
             <li>
               Analizar e interpretar contenido, incluidos texto, imágenes,
-              diagramas, gráficos y tablas, incluso en documentos largos de hasta
-              1,000 páginas.
+              diagramas, gráficos y tablas, incluso en documentos largos de
+              hasta 1,000 páginas.
             </li>
             <li>Extraer información en formatos de salida estructurados.</li>
             <li>
@@ -36,6 +40,33 @@ function Instructions() {
             <li>
               Procesar documentos que no sean PDF, aunque en ese caso perderán
               parte del contexto visual (gráficos o formatos).
+            </li>
+          </ul>
+        </article>
+
+        <article className="instructions__card">
+          <h3>Preguntas de ejemplo</h3>
+          <ul className="instructions__list">
+            <li>Explica esta parte específica del documento.</li>
+            <li>Amplía el resumen que generaste.</li>
+            <li>Resume este contenido en pocas palabras.</li>
+            <li>Aclara esta parte que no entiendo del documento.</li>
+            <li>Identifica las fechas, nombres y datos relevantes.</li>
+            <li>
+              Responde las siguientes dudas sobre el contenido: ¿Cuál es el tema
+              principal?
+            </li>
+            <li>
+              Responde las siguientes dudas sobre el contenido: ¿Qué información
+              es más importante?
+            </li>
+            <li>
+              Responde las siguientes dudas sobre el contenido: ¿Qué
+              conclusiones se pueden obtener?
+            </li>
+            <li>
+              Indica si el contenido es claro o presenta problemas de
+              interpretación.
             </li>
           </ul>
         </article>
