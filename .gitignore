@@ -24,4 +24,7 @@ dist-ssr
 *.sw?
 
 *.env
-firebase
+.firebase/
+.agents/
+.claude/
+skills-lock.json
