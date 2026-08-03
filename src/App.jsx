@@ -27,6 +27,10 @@ function App() {
           <Instructions />
         </aside>
       </main>
+
+      <footer className="app-footer">
+        <p>&copy; 2026 Fortaleza Digital. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 }
