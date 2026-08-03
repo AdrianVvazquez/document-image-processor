@@ -141,7 +141,7 @@ function Summary({ file }) {
       ) : (
         <>
           <p className="summary__body">{summary}</p>
-          {fileData && <Chat fileData={fileData} />}
+          {fileData && <Chat fileData={fileData} summary={summary} />}
         </>
       )}
     </section>

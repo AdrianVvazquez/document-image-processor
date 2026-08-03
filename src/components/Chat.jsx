@@ -13,12 +13,11 @@ const INITIAL_MESSAGE = {
   ],
 };
 
-function Chat({ fileData }) {
+function Chat({ fileData, summary }) {
   const [messages, setMessages] = useState([INITIAL_MESSAGE]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const chatRef = useRef(null);
-  const fileIncluded = useRef(false);
 
   async function handleSendMessage(e) {
     e.preventDefault();
@@ -36,25 +35,25 @@ function Chat({ fileData }) {
 
     try {
       if (!chatRef.current) {
-        chatRef.current = chatModel.startChat({});
+        // Seed history with the file and generated summary so the model has full context
+        chatRef.current = chatModel.startChat({
+          history: [
+            {
+              role: "user",
+              parts: [
+                { inlineData: { data: fileData.base64, mimeType: fileData.mimeType } },
+                { text: "Analiza este documento." },
+              ],
+            },
+            {
+              role: "model",
+              parts: [{ text: summary }],
+            },
+          ],
+        });
       }
 
-      // Include the file only on the first message so the model has document context
-      const parts = !fileIncluded.current
-        ? [
-            {
-              inlineData: {
-                data: fileData.base64,
-                mimeType: fileData.mimeType,
-              },
-            },
-            trimmed,
-          ]
-        : trimmed;
-
-      fileIncluded.current = true;
-
-      const { stream } = await chatRef.current.sendMessageStream(parts);
+      const { stream } = await chatRef.current.sendMessageStream(trimmed);
 
       const modelId = Date.now();
       setMessages((prev) => [
