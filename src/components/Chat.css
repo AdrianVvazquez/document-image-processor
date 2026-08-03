@@ -1,0 +1,81 @@
+.chat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(120, 79, 255, 0.14);
+  border-radius: 16px;
+  background: #fcfbff;
+}
+
+.chat-card__header h3 {
+  font-size: 1rem;
+  color: #221b32;
+}
+
+.chat-card__eyebrow {
+  margin-bottom: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #7c4dff;
+}
+
+.chat-card__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.chat-card__bubble {
+  max-width: 88%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.chat-card__bubble p {
+  color: #3f3752;
+}
+
+.chat-card__bubble--user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #7c4dff, #6d3df4);
+}
+
+.chat-card__bubble--user p {
+  color: #ffffff;
+}
+
+.chat-card__bubble--model {
+  align-self: flex-start;
+  background: #f2ebff;
+}
+
+.chat-card__composer {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-card__composer input {
+  flex: 1;
+  border: 1px solid rgba(120, 79, 255, 0.2);
+  border-radius: 999px;
+  padding: 10px 12px;
+  outline: none;
+  font: inherit;
+}
+
+.chat-card__composer button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #7c4dff, #6d3df4);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
