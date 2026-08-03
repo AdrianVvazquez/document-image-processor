@@ -29,7 +29,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>&copy; 2026 Fortaleza Digital. Todos los derechos reservados.</p>
+        <p>&copy; 2026 DistributedBackend Systems. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
